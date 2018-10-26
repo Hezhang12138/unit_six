@@ -1,24 +1,22 @@
-number = int(input("what maximum number you want to put in?"))
+# Frank Zhang
+# Oct. 26th
+# "I finally figure out how to do loops with list, I did not understand it for almost a week"
 
 
-list = [2, number]
-prime = []
+max_number = int(input("what maximum number you want to put in?"))
 
 
-def primes(number):
-    if number == 0 or number == 1:
-        return False
-    for x in list:
-        if number % x == 0:
-            return True
-        prime.append(primes)
+number_list = []
+primes = []
 
 
-def main():
-    list = [2, number]
-    prime = []
-    primes(number)
-    print(prime)
+for x in range(2, max_number + 1):
+    if x > 1:
+        for i in range(2, x):
+            if (x % i) == 0:
+                break
+        else:
+            primes.append(x)
 
 
-main()
+print("the list of prime numbers is", primes)
